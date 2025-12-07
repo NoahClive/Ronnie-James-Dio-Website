@@ -1,0 +1,130 @@
+.discography-row {
+    display: flex;
+    margin: 40px;
+}
+
+.album-container {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.band-name {
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+    position: relative;
+}
+
+.album-name {
+    font-size: 20px;
+    font-style: italic;
+    color: white;
+    position: relative;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+
+.album-year {
+    font-size: 15px;
+    color: white;
+}
+
+div.album-container img {
+    height: 350px;
+    border: 1px solid rgb(205, 203, 187);
+}
+
+/* Modal styles */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+}
+    .modal-content { position: relative; }
+
+    .modal-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 44px;
+        height: 44px;
+        border-radius: 22px;
+        background: rgba(0,0,0,0.6);
+        color: #fff;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        cursor: pointer;
+        z-index: 1200;
+    }
+
+    .modal-nav:focus { outline: 2px solid #fff; }
+
+    .modal-prev { left: 12px; }
+    .modal-next { right: 12px; }
+
+    /* Slightly hide when modal is closed (if overlay toggles .open) */
+    .modal-overlay:not(.open) .modal-nav { display: none; }
+
+.modal-overlay.open {
+    display: flex;
+}
+.modal-content {
+    background: #111;
+    color: #fff;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+}
+.modal-left {
+    flex: 1 1 50%;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+.modal-left img {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border: 1px solid #444;
+}
+.modal-right {
+    flex: 1 1 50%;
+    padding: 18px;
+}
+.modal-right h2 { margin-top: 0; color: #f4f4f4 }
+.modal-desc { color: #ddd; margin-top: 8px; line-height: 1.4 }
+.modal-extra-img { max-width: 100%; margin-top: 12px; border: 1px solid #444 }
+.modal-close {
+    position: absolute;
+    right: 28px;
+    top: 28px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* small screens: stack modal content */
+@media (max-width: 700px) {
+    .modal-content { flex-direction: column; }
+    .modal-left, .modal-right { width: 100%; }
+}
+
+/* pointer for clickable images */
+.picture-text img { cursor: pointer }
