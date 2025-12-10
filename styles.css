@@ -7,6 +7,10 @@ header {
     background-color:rgb(33, 33, 33);
 }
 
+h1 {
+    color: white;
+}
+
 .master-title {
     color: red;
     font-size: 35px;
@@ -18,9 +22,18 @@ header {
     padding-left: 15px;
 }
 
+@media (max-width: 690px) {
+    .master-title {
+        display: none;
+    }
+    .subtitle {
+        display: none;
+    }
+}
+
 .nav-header {
-    position: relative;
-    top: -45px;
+    position: fixed;
+    top: 0;
     right: 20px;
     overflow: hidden;
 }
@@ -45,6 +58,7 @@ header {
 }
 
 body {
+    color: white;
     background-size:cover;
     margin: 0;
     padding: 0;
@@ -58,14 +72,34 @@ body.bio-body {
     margin-top: 80px;
 }
 
-body p {
+.bio-title {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.bio-container {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.bio-container img{
+    height: 30vw;
+    margin-right: 10vw;
+}
+
+.bio-text p {
     text-indent: 2em;
     color: white;
     font-size: 18px;
     line-height: 2;
     margin: 20px;
-    margin-left: 10vw;
-    margin-right: 10vw;
 }
 
 body p.quote {
