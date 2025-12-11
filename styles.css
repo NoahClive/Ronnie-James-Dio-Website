@@ -4,7 +4,7 @@ header {
     width: 100vw;
     height: 75px;
     top: 0;
-    background-color: rgb(33, 33, 33);
+    background-color: rgb(0, 0, 0);
 }
 
 h1 {
@@ -41,10 +41,11 @@ h1 {
 }
 
 .nav-header a {
+    top: 0;
     float: right;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 20px 16px;
     text-decoration: none;
     font-size: 17px;
 }
@@ -65,8 +66,8 @@ body {
     margin: 0;
     padding: 0;
     margin-top: 70px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-image: linear-gradient(to bottom, black, rgb(135, 5, 5))
+    font-family: 'century gothic', sans-serif;
+    background-image: linear-gradient(to bottom, rgb(94, 22, 0), rgb(12, 0, 34))
 }
 
 body.bio-body {
@@ -109,32 +110,6 @@ body p.quote {
     text-indent: 0;
     margin-left: 20vw;
     margin-right: 20vw;
-}
-
-
-
-footer {
-    z-index: 110;
-    position: static;
-    overflow: hidden;
-    bottom: 0;
-    background-color: rgb(172, 32, 32);
-    color: white;
-    padding: 0px;
-}
-
-.master-footer h1 {
-    position: relative;
-    flex: 1;
-    left: 10px;
-    top: 0px;
-}
-
-.footer-subtitle {
-    position: relative;
-    left: 10px;
-    bottom: 20px;
-
 }
 
 .sources {
@@ -182,6 +157,18 @@ footer {
     width: 50%;
 
 }
+
+.home-segments {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-size: 2.3vw;
+    justify-content: space-around;
+    gap: 2vw;
+}
+
 .segment-content {
     display: flex;
     flex-direction: column;
@@ -190,30 +177,42 @@ footer {
 }
 
 button {
-    background-color: red;
-    border: none;
+    background-color: rgba(255, 0, 0, 0);
+    border: 1px solid rgb(231, 227, 0);
     color: white;
-    padding: 15px 32px;
+    padding: 10px 70px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 2vw;
+    font: 'century gothic', sans-serif;
+    font-size: 1.5vw;
     margin-top: 20px;
     cursor: pointer;
-    border-radius: 8px;
-}
-.home-segments {
-    display: flex;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    font-size: 2.3vw;
-    justify-content: space-around;
-    align-items: center;
-    gap:2vw;
+    border-radius: 25px;
 }
 
 
 .home-segments img {
     width: 50vw;
     border: 2px solid rgb(205, 203, 187);
+}
+
+.master-footer {
+    width: 100%;
+    z-index: 110;
+    position: static;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    background-color: red;
+    color: white;
+    padding: 0px;
+}
+
+.footer-subtitle {
+    position: relative;
+    left: 10px;
+    padding-bottom: 10px;
+
 }

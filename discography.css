@@ -1,6 +1,9 @@
 .discography-row {
     display: flex;
+    flex-wrap: wrap;
     margin: 40px;
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
 .album-container {
