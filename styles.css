@@ -4,7 +4,7 @@ header {
     width: 100vw;
     height: 75px;
     top: 0;
-    background-color:rgb(33, 33, 33);
+    background-color: rgb(33, 33, 33);
 }
 
 h1 {
@@ -16,6 +16,7 @@ h1 {
     font-size: 35px;
     padding-left: 15px;
 }
+
 .subtitle {
     position: relative;
     color: white;
@@ -26,6 +27,7 @@ h1 {
     .master-title {
         display: none;
     }
+
     .subtitle {
         display: none;
     }
@@ -59,27 +61,26 @@ h1 {
 
 body {
     color: white;
-    background-size:cover;
+    background-size: cover;
     margin: 0;
     padding: 0;
-    margin-top: 85px;
+    margin-top: 70px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-image: linear-gradient(to bottom, black, rgb(135, 5, 5))
 }
 
 body.bio-body {
     background-image: linear-gradient(to bottom, black, rgb(33, 33, 33));
+    margin-top: 100px;
 }
 
 .bio-title {
     color: white;
     font-size: 30px;
     text-align: center;
-    margin-bottom: 30px;
-    margin-top: 45px;
     margin-left: 20vw;
     margin-right: 20vw;
-   
+
 }
 
 .bio-container {
@@ -90,7 +91,7 @@ body.bio-body {
     margin-right: 10vw;
 }
 
-.bio-container img{
+.bio-container img {
     height: 30vw;
     margin-right: 10vw;
 }
@@ -113,8 +114,8 @@ body p.quote {
 
 
 footer {
-    z-index:110;
-    position:static;
+    z-index: 110;
+    position: static;
     overflow: hidden;
     bottom: 0;
     background-color: rgb(172, 32, 32);
@@ -122,7 +123,7 @@ footer {
     padding: 0px;
 }
 
-.master-footer h1{
+.master-footer h1 {
     position: relative;
     flex: 1;
     left: 10px;
@@ -140,7 +141,79 @@ footer {
     overflow: hidden;
 }
 
-.sources h1{
+.sources h1 {
     position: relative;
     left: 40px;
+}
+
+/* Helper: make a section background cover full width and scale */
+.home-top {
+    position: relative;
+    /* establish stacking context for the ::before overlay */
+    width: 100%;
+    min-height: 60vh;
+    overflow: hidden;
+    border-bottom: 5px solid black;
+}
+
+/* The pseudo-element holds the background image and brightness filter only */
+.home-top::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* top:0; right:0; bottom:0; left:0; */
+    background-image: url('images/Holy_Diver_4k.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(70%);
+    z-index: 0;
+}
+
+/* Keep the actual content above the overlay */
+.home-top>* {
+    position: relative;
+    z-index: 1;
+}
+
+.dio-logo {
+    display: block;
+    margin: auto;
+    width: 50%;
+
+}
+.segment-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+button {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2vw;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.home-segments {
+    display: flex;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-size: 2.3vw;
+    justify-content: space-around;
+    align-items: center;
+    gap:2vw;
+}
+
+
+.home-segments img {
+    width: 50vw;
+    border: 2px solid rgb(205, 203, 187);
 }
